@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ג'מיני הלכה למעשה - תיכון גולדה, מפגש 2, 24.11.2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@200;300;400;500;700;800&display=swap" rel="stylesheet">
+<style>
+/* ================= LOOK ================= */
+:root{
+  --accent:#75B743; --accent-dk:#5E9A28; --accent-pale:#EDF5E4; --accent-tint:#F5FAF0;
+  --accent-2:#AF242A; --ink:#4A4845; --muted:#7A7874; --paper:#FFFFFF; --line:#E2E7DB;
+  --sep-bg:#9ED174; --grey:#B9B6B0; --grey-pale:#F3F2F0;
+}
+h1{font-weight:800;font-size:62px;line-height:1.14;color:var(--accent-dk)}
+h2{font-weight:800;font-size:48px;line-height:1.2;margin-bottom:20px;color:var(--ink)}
+p,li{font-size:28px;line-height:1.55;font-weight:300}
+.huge{font-size:52px;line-height:1.3;font-weight:800}
+.big{font-size:40px;line-height:1.38;font-weight:300}
+.lead{font-size:32px;line-height:1.5}
+.dim{color:var(--muted)}
+.r{color:var(--accent-2);font-weight:700}
+.g{color:var(--accent-dk);font-weight:700}
+.kicker{font-size:19px;letter-spacing:2px;color:var(--accent-dk);font-weight:700;margin-bottom:8px}
+.kicker .tm{color:var(--accent-2);letter-spacing:0;margin-right:10px}
+.rule{width:76px;height:5px;background:var(--accent);margin:16px 0 20px;border-radius:3px}
+ul{list-style:none}
+ul.dots li{position:relative;padding-right:40px;margin:14px 0}
+ul.dots li:before{content:"";position:absolute;right:5px;top:17px;width:13px;height:13px;
+  border:3px solid var(--accent);transform:rotate(24deg);border-radius:2px}
+.cols{display:flex;gap:24px}
+.card{flex:1;background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:20px 24px}
+.card h4{font-size:28px;font-weight:800;margin-bottom:8px;color:var(--accent-dk)}
+.card p{font-size:24px;line-height:1.45}
+.note{background:#FFF8E6;border-radius:8px;padding:14px 22px;font-size:25px;line-height:1.45;font-weight:300;border-right:6px solid #C98F00}
+.small{font-size:20px;color:var(--muted);font-weight:300}
+.logo-card{position:absolute;top:36px;left:60px;background:#fff;border-radius:10px;padding:10px 16px}
+.logo-card img{width:150px;display:block}
+/* separators */
+.slide.sep{background:var(--sep-bg);color:#fff}
+.slide.sep h2,.slide.sep .kicker,.slide.sep .agenda .it{-webkit-text-stroke:1px #1F1E1C;paint-order:stroke fill;text-shadow:0 1px 3px rgba(0,0,0,.3)}
+.slide.sep .kicker{color:#fff}
+.slide.sep .agenda .it{color:rgba(255,255,255,.9)} .slide.sep .agenda .it.act{color:#fff;font-weight:800}
+.agenda{display:flex;flex-direction:column;gap:12px;margin-top:4px}
+.agenda .it{display:flex;align-items:center;gap:20px;font-size:36px;color:var(--ink)}
+.agenda .it .n{font-size:20px;font-weight:800;min-width:38px}
+.slide.sep .agenda .it .n{color:#fff}
+.agenda .it.act:after{content:"";width:16px;height:16px;background:#fff;border:3px solid var(--accent-2);transform:rotate(24deg);border-radius:2px;margin-right:8px}
+.agenda .grp{font-size:20px;font-weight:700;color:#fff;margin-top:6px;-webkit-text-stroke:0;text-shadow:0 1px 2px rgba(0,0,0,.35)}
+.sq-art{position:absolute;left:70px;bottom:60px;width:400px;height:300px}
+.sq-art i{position:absolute;display:block;border-radius:6px}
+/* the mirror: nine squares */
+.nine{display:grid;grid-template-columns:repeat(3,96px);gap:26px;justify-content:center}
+.nine i{width:96px;height:96px;border-radius:12px;display:block;transform:rotate(14deg);background:var(--accent)}
+.nine i.odd{background:#fff;border:6px solid var(--accent-2)}
+/* insights */
+.insight{flex:1;border-radius:14px;padding:34px 34px;min-height:290px;border:2px solid var(--line);background:#fff}
+.insight .k{display:inline-block;font-size:20px;font-weight:800;color:#fff;background:var(--accent-dk);border-radius:30px;padding:3px 16px;margin-bottom:12px}
+.insight h4{font-size:42px;font-weight:800;line-height:1.25;color:var(--accent-dk);margin-bottom:10px}
+.insight p{font-size:29px;line-height:1.45}
+.insight.b .k{background:var(--accent-2)}
+/* process steps */
+.steps{display:flex;gap:14px;align-items:stretch}
+.step{flex:1;background:var(--accent-tint);border:1.5px solid var(--line);border-radius:10px;padding:22px 22px;position:relative;min-height:230px}
+.step .k{font-size:18px;font-weight:800;color:var(--accent-dk);letter-spacing:1px;margin-bottom:6px}
+.step p{font-size:28px;line-height:1.38}
+.step.hl{border:3px solid var(--accent-2);background:#fff}
+.arrow{font-size:30px;color:var(--accent);font-weight:800;align-self:center}
+/* pairs */
+.pairs{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.pc{background:#fff;border:1.5px solid var(--line);border-top:7px solid var(--accent);border-radius:10px;padding:22px 18px;text-align:center}
+.pc b{display:block;font-size:34px;font-weight:800;color:var(--ink);line-height:1.3}
+.pc span{display:block;font-size:22px;color:var(--muted);margin:2px 0}
+/* paths */
+.path{flex:1;border-radius:12px;padding:22px 26px;min-height:170px;border:2px solid var(--line)}
+.path h4{font-size:29px;font-weight:800;margin-bottom:8px}
+.path .q{font-size:26px;line-height:1.45;font-weight:400}
+.path .s{font-size:23px;margin-top:10px;line-height:1.4}
+.path.short{background:var(--grey-pale)} .path.short h4{color:var(--muted)}
+.path.think{background:var(--accent-tint);border-color:var(--accent)} .path.think h4{color:var(--accent-dk)}
+/* QR */
+.qrcol{width:250px;flex:none;display:flex;flex-direction:column;align-items:center;gap:8px;align-self:center}
+.qrbox{background:#fff;border:2px solid var(--line);border-radius:12px;padding:10px}
+.qrbox img{display:block;width:100%}
+.qrcol p{font-size:20px;text-align:center;line-height:1.3;font-weight:500}
+.url{direction:ltr;unicode-bidi:isolate;text-align:center;line-height:1.3;font-size:15px;color:var(--muted);font-weight:400}
+/* question columns */
+.qcol{flex:1;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:26px 24px;min-height:250px;display:flex;flex-direction:column;gap:10px;border-top:7px solid var(--accent)}
+.qcol .n{font-size:24px;font-weight:800;color:var(--accent-2)}
+.qcol p{font-size:31px;line-height:1.4;font-weight:500}
+/* staircase */
+.stair{position:relative;width:420px;height:300px}
+.stair i{position:absolute;bottom:0;width:100px;background:var(--accent-pale);border:3px solid var(--accent);border-bottom:0;border-radius:6px 6px 0 0}
+.stair b{position:absolute;font-size:20px;font-weight:700;color:var(--accent-dk);width:100px;text-align:center}
+/* chat mock */
+.chat{display:flex;flex-direction:column;gap:12px}
+.bub{border-radius:18px;padding:12px 18px;font-size:22px;line-height:1.42;max-width:94%}
+.bub.me{background:var(--accent-pale);align-self:flex-start;border-bottom-right-radius:4px}
+.bub.ai{background:var(--grey-pale);align-self:flex-end;border-bottom-left-radius:4px}
+.bub small{display:block;font-size:15px;color:var(--muted);margin-bottom:2px;font-weight:500}
+/* objection */
+.obj{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.oc{background:#fff;border:1.5px solid var(--line);border-right:7px solid var(--accent);border-radius:10px;padding:22px 26px;min-height:240px}
+.oc .n{font-size:20px;font-weight:800;color:var(--accent-2)}
+.oc h4{font-size:31px;font-weight:800;color:var(--accent-dk);line-height:1.25;margin:2px 0 4px}
+.oc p{font-size:25px;line-height:1.42}
+/* five questions */
+.grid5{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.fc{background:var(--accent-tint);border:1.5px solid var(--line);border-radius:10px;padding:20px 18px;min-height:300px}
+.fc .k{font-size:20px;font-weight:800;color:var(--accent-2);margin-bottom:6px}
+.fc p{font-size:27px;line-height:1.38;font-weight:500}
+/* closing paths */
+.np{flex:1;background:#fff;border:1.5px solid var(--line);border-top:7px solid var(--accent);border-radius:10px;padding:26px 26px;min-height:250px}
+.np h4{font-size:34px;font-weight:800;color:var(--accent-dk);margin-bottom:8px;line-height:1.25}
+.np p{font-size:27px;line-height:1.42}
+
+/* agenda card on separator slides */
+.agcard{background:#fff;border-radius:14px;padding:18px 26px;max-width:760px;box-shadow:0 10px 30px rgba(0,0,0,.12);color:var(--ink)}
+.agcard .grp{font-size:18px;font-weight:800;color:var(--accent-2);letter-spacing:1px;margin:6px 0 2px}
+.agcard .ai{display:flex;gap:16px;align-items:flex-start;padding:7px 0;border-bottom:1px solid var(--line)}
+.agcard .ai:last-child{border-bottom:0}
+.agcard .ai .n{font-size:19px;font-weight:800;color:var(--accent);min-width:30px;padding-top:6px}
+.agcard .ai b{display:block;font-size:28px;font-weight:800;line-height:1.25;color:var(--ink)}
+.agcard .ai span.d{display:block;font-size:20px;line-height:1.35;color:var(--muted);font-weight:400}
+.agcard .ai.act b{color:var(--accent-2)}
+.agcard .ai.act .n{color:var(--accent-2)}
+/* where-on-the-page label under the QR */
+.where{display:flex;flex-direction:column;align-items:center;background:var(--accent-dk);color:#fff;border-radius:12px;padding:8px 14px;width:100%}
+.where span{font-size:17px;font-weight:500}
+.where b{font-size:30px;font-weight:800;line-height:1.15}
+.qrcol{border-right:3px solid var(--line);padding-right:24px}
+/* pairs with shared theme */
+.pc i{display:block;font-style:normal;font-size:19px;line-height:1.3;color:var(--accent-dk);font-weight:700;margin-top:10px}
+
+/* science edition: four squares, menu links, back links, QR on the menu slide */
+.nine.four{grid-template-columns:repeat(2,110px);gap:30px}
+.nine.four i{width:110px;height:110px}
+.agcard a.ai{color:inherit;text-decoration:none}
+.agcard a.ai:hover b{color:var(--accent-2)}
+.agcard .swap{font-size:26px;font-weight:700;color:var(--accent-2);line-height:1.35;padding:4px 0 10px;border-bottom:2px solid var(--line);margin-bottom:4px}
+.qrmenu{position:absolute;left:70px;bottom:46px;width:250px;background:#fff;border-radius:14px;padding:14px;display:flex;flex-direction:column;align-items:center;gap:8px;box-shadow:0 10px 30px rgba(0,0,0,.12)}
+.qrmenu .qrbox{border:0;padding:0}
+.qrmenu .qrbox img{width:200px}
+.back{position:absolute;top:14px;left:24px;font-size:17px;font-weight:700;color:var(--accent-dk);text-decoration:none;background:#fff;border:2px solid var(--line);border-radius:20px;padding:3px 14px}
+.back:hover{border-color:var(--accent)}
+.obj.tight .oc{min-height:200px}
+
+/* ================= MECHANICS ================= */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:#2E2D2A;overflow:hidden;font-family:'Heebo',Arial,sans-serif}
+#stage{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;overflow:hidden}
+#deck{width:1280px;height:720px;flex:0 0 1280px;position:relative;transform-origin:center center;
+  overflow:hidden;background:var(--paper);box-shadow:0 24px 80px rgba(0,0,0,.55)}
+.slide{position:absolute;inset:0;padding:46px 70px;display:none;flex-direction:column;
+  background:var(--paper);color:var(--ink);overflow:hidden}
+.slide.on{display:flex}
+.split{display:flex;gap:44px;flex:1;min-height:0;align-items:center}
+.split>.tx{flex:1.15;min-width:0}
+.split>.im{flex:1;min-width:0;align-self:stretch;display:flex;align-items:center;justify-content:center}
+.split>.im img{max-width:100%;max-height:100%;object-fit:contain}
+.mid{justify-content:center;text-align:center;align-items:center}
+.fill{flex:1;min-height:0;display:flex;flex-direction:column;justify-content:center}
+.title-wrap{flex:1;display:flex;flex-direction:column;justify-content:center}
+.f{opacity:0;transform:translateY(9px);transition:opacity .3s ease,transform .3s ease}
+.f.vis{opacity:1;transform:none}
+#bar{position:fixed;bottom:0;right:0;height:4px;background:var(--accent);transition:width .25s ease;z-index:9}
+#num{position:fixed;bottom:14px;left:20px;color:#8d8b86;font-size:13px;letter-spacing:1px;z-index:9}
+#help{position:fixed;bottom:14px;right:20px;color:#75736e;font-size:12px;z-index:9}
+/* ================= GOLDA EDITION (from session 1) ================= */
+.en{unicode-bidi:isolate;direction:ltr;display:inline-block}
+.slide.sep .agcard{position:relative;z-index:2}
+.sq-art.big{left:60px;bottom:70px;width:420px;height:330px}
+.promptbox{background:#F7F5FA;border:1.5px solid #DDD3E8;border-right:7px solid #7A4A95;border-radius:12px;padding:18px 22px;font-size:21px;line-height:1.5;white-space:pre-wrap;color:var(--ink)}
+.vsteps{display:flex;flex-direction:column;gap:14px}
+.vstep{display:flex;gap:16px;align-items:flex-start}
+.vstep .k{flex:none;display:grid;place-items:center;width:46px;height:46px;border-radius:10px;background:var(--accent-dk);color:#fff;font-weight:800;font-size:22px;transform:rotate(-6deg)}
+.vstep p{font-size:27px;line-height:1.38;padding-top:2px}
+.boxes{display:flex;align-items:center;gap:16px;justify-content:center}
+.bx{background:#fff;border:2px solid var(--accent);border-radius:12px;padding:20px 22px;width:220px;text-align:center}
+.bx b{display:block;font-size:30px;font-weight:800;color:var(--accent-dk)}
+.bx span{display:block;font-size:20px;color:var(--muted);margin-top:4px;line-height:1.3}
+.bx.out{background:var(--accent-dk);border-color:var(--accent-dk);width:260px}
+.bx.out b{color:#fff;font-size:28px}
+.plus{font-size:40px;font-weight:800;color:var(--accent)}
+.cmp{display:grid;grid-template-columns:1fr 1fr;border:2px solid var(--line);border-radius:12px;overflow:hidden}
+.cmp .h{padding:12px 22px;font-size:26px;font-weight:800;color:#fff}
+.cmp .h.gem{background:#8A8781}
+.cmp .h.skl{background:var(--accent-dk)}
+.cmp .c{padding:14px 22px;font-size:24px;line-height:1.4;border-top:1.5px solid var(--line);background:#fff}
+.cmp .c.skl{background:var(--accent-tint)}
+.cmp .c b{font-weight:800}
+.lanes{display:flex;flex-direction:column;gap:22px}
+.lane{display:flex;align-items:stretch;gap:0}
+.lane .who{flex:none;width:230px;display:flex;align-items:center;justify-content:center;text-align:center;font-size:25px;font-weight:800;color:#fff;padding:10px}
+.lane.priv .who{background:#8A4B00;border-radius:0 12px 12px 0}
+.lane.moe .who{background:#1F4E8C;border-radius:0 12px 12px 0}
+.lane .pt{flex:1;border:2px solid var(--line);border-right:0;padding:12px 18px;background:#fff;position:relative}
+.lane .pt:last-child{border-radius:12px 0 0 12px}
+.lane .pt .d{font-size:21px;font-weight:800;color:var(--accent-2)}
+.lane .pt p{font-size:22px;line-height:1.35}
+.lane .pt.past{background:var(--grey-pale)} .lane .pt.past .d{color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.chip{background:#fff;border:2px solid var(--accent);border-radius:30px;padding:6px 18px;font-size:24px;font-weight:700;color:var(--accent-dk)}
+.chips .ar{font-size:26px;color:var(--muted);font-weight:800}
+.howcard{flex:1;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:22px 24px}
+.howcard h4{font-size:30px;font-weight:800;margin-bottom:6px}
+.howcard .sub{font-size:21px;color:var(--muted);margin-bottom:14px}
+.howcard.moe{border-top:8px solid #1F4E8C} .howcard.moe h4{color:#1F4E8C}
+.howcard.priv{border-top:8px solid #8A4B00} .howcard.priv h4{color:#8A4B00}
+ol.gems{list-style:none;display:flex;flex-direction:column;gap:9px}
+ol.gems li{display:flex;gap:14px;align-items:flex-start;font-size:25px;line-height:1.35}
+ol.gems li .n{flex:none;display:grid;place-items:center;width:38px;height:38px;border-radius:9px;background:var(--accent-dk);color:#fff;font-weight:800;font-size:19px;transform:rotate(-6deg)}
+ol.gems li.hl .n{background:var(--accent-2)}
+ol.gems li .pill{display:inline-block;background:var(--accent-2);color:#fff;font-size:16px;font-weight:800;border-radius:20px;padding:1px 12px;margin-right:8px;vertical-align:middle}
+.wc{background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:16px 20px;display:flex;gap:16px;align-items:flex-start;min-height:118px}
+.wc .ic{flex:none;width:58px;height:58px;border-radius:14px;display:grid;place-items:center;font-size:18px;font-weight:800;color:#fff;background:#1F4E8C}
+.wc p{font-size:23px;line-height:1.4}
+.acc{display:flex;gap:26px;align-items:stretch}
+.acol{flex:1;border-radius:14px;padding:22px 26px;color:#fff;display:flex;flex-direction:column;gap:8px;justify-content:center}
+.acol.moe{background:#1F4E8C} .acol.priv{background:#8A4B00}
+.acol b{font-size:30px;font-weight:800}
+.acol .to{font-size:23px;font-weight:400;opacity:.95}
+.acol .to:before{content:"\2190  "}
+.p4{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.pc4{background:#fff;border:1.5px solid var(--line);border-right:8px solid var(--accent);border-radius:12px;padding:22px 26px;min-height:150px}
+.pc4 h4{font-size:28px;font-weight:800;margin-bottom:6px}
+.pc4 p{font-size:25px;line-height:1.42}
+.pc4.priv{border-right-color:#8A4B00} .pc4.priv h4{color:#8A4B00}
+.pc4.moe{border-right-color:#1F4E8C} .pc4.moe h4{color:#1F4E8C}
+.pc4.risk{border-right-color:var(--accent-2)} .pc4.risk h4{color:var(--accent-2)}
+.pc4.min h4{color:var(--accent-dk)}
+.onoff{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.oo{border-radius:12px;padding:18px 24px;border:2px solid var(--line);background:#fff}
+.oo h4{font-size:28px;font-weight:800;margin-bottom:6px}
+.oo ul li{font-size:23px;line-height:1.4;margin:6px 0;padding-right:26px;position:relative}
+.oo ul li:before{content:"";position:absolute;right:2px;top:12px;width:11px;height:11px;border:3px solid currentColor;transform:rotate(24deg);border-radius:2px;opacity:.6}
+.oo.on{border-color:var(--accent)} .oo.on h4{color:var(--accent-dk)}
+.oo.off{border-color:#B9B6B0;background:var(--grey-pale)} .oo.off h4{color:#5F5D58}
+.wbar{display:flex;height:64px;border-radius:12px;overflow:hidden;font-weight:800;color:#fff;font-size:21px}
+.wbar div{display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.15;text-align:center;padding:0 8px}
+.wbar span{font-size:26px}
+.big2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.bc{background:var(--accent-tint);border:2px solid var(--accent);border-radius:14px;padding:22px 26px}
+.bc h4{font-size:34px;font-weight:800;color:var(--accent-dk);margin-bottom:6px}
+.bc p{font-size:24px;line-height:1.42}
+
+/* ================= SESSION 2 ================= */
+/* recap cards */
+.g4c{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.rc{background:#fff;border:1.5px solid var(--line);border-top:7px solid var(--accent);border-radius:12px;padding:20px 20px;min-height:220px}
+.rc .k{font-size:20px;font-weight:800;color:var(--accent-2);margin-bottom:6px}
+.rc p{font-size:25px;line-height:1.4;font-weight:400}
+.ask{display:flex;align-items:center;gap:22px;background:var(--accent-pale);border-radius:14px;padding:20px 28px;margin-top:24px}
+.ask b{font-size:38px;font-weight:800;color:var(--accent-dk);line-height:1.25}
+.ask span{font-size:24px;color:var(--ink)}
+.ask i{flex:none;width:34px;height:34px;border:6px solid var(--accent-2);border-radius:5px;transform:rotate(24deg);display:block}
+/* bar charts */
+.charts{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+.chart h4{font-size:26px;font-weight:800;color:var(--accent-dk);margin-bottom:10px}
+.brow{display:grid;grid-template-columns:220px 1fr 34px;align-items:center;gap:12px;margin:9px 0}
+.brow .lb{font-size:21px;line-height:1.2;font-weight:500}
+.brow .tr{height:30px;background:var(--grey-pale);border-radius:5px;overflow:hidden}
+.brow .bar{height:100%;background:var(--accent);border-radius:5px}
+.brow .bar.hot{background:var(--accent-2)}
+.brow .v{font-size:24px;font-weight:800;color:var(--ink);text-align:left}
+.brow.hot .lb,.brow.hot .v{color:var(--accent-2);font-weight:800}
+.concl{margin-top:22px;font-size:29px;line-height:1.45;font-weight:400;background:var(--accent-tint);border-right:7px solid var(--accent);border-radius:10px;padding:14px 24px}
+/* chain of steps */
+.chain{display:flex;gap:14px;align-items:stretch}
+.chain .lk{flex:1;background:var(--accent-tint);border:1.5px solid var(--line);border-radius:12px;padding:22px 22px;min-height:250px}
+.chain .lk .k{font-size:19px;font-weight:800;color:var(--accent-dk);letter-spacing:1px;margin-bottom:8px}
+.chain .lk p{font-size:26px;line-height:1.42}
+/* break */
+.timer-btn{font-family:inherit;font-size:28px;font-weight:700;background:#fff;color:var(--accent-dk);border:3px solid var(--accent);border-radius:40px;padding:12px 34px;cursor:pointer}
+#tm{font-size:150px;font-weight:800;color:var(--accent-dk);line-height:1;direction:ltr}
+/* screen map */
+.map{display:flex;gap:30px;flex:1;min-height:0;align-items:center}
+.mock{flex:none;width:640px;height:470px;border:2px solid #CFCAC2;border-radius:16px;overflow:hidden;display:flex;background:#fff;box-shadow:0 10px 30px rgba(0,0,0,.08)}
+.mock .side{flex:none;width:220px;background:#F3F2F0;padding:16px 14px;display:flex;flex-direction:column;gap:8px;border-left:1.5px solid #E2DED7}
+.mock .side .it{font-size:17px;line-height:1.25;padding:7px 10px;border-radius:8px;background:#fff;color:var(--ink);display:flex;align-items:center;gap:8px}
+.mock .side .it.mut{background:transparent;color:var(--muted)}
+.mock .side .sp{flex:1}
+.mock .side .ln{height:9px;border-radius:4px;background:#E2DED7;margin:4px 10px}
+.mock .main{flex:1;display:flex;flex-direction:column;padding:22px 20px;gap:16px}
+.mock .hello{flex:1;display:flex;align-items:center;justify-content:center;font-size:26px;color:#B9B6B0;font-weight:500}
+.pbox{border:2px solid #CFCAC2;border-radius:22px;padding:12px 16px;font-size:17px;color:var(--muted)}
+.pbox .row{display:flex;align-items:center;gap:10px;margin-top:12px}
+.pbox .pl{width:34px;height:34px;border-radius:50%;border:2px solid #B9B6B0;display:grid;place-items:center;font-size:24px;font-weight:700;color:var(--ink)}
+.pbox .mdl{margin-right:auto;border:1.5px solid #CFCAC2;border-radius:16px;padding:3px 12px;font-size:15px;color:var(--ink)}
+.bd{flex:none;display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--accent-2);color:#fff;font-size:16px;font-weight:800;line-height:1}
+.callouts{flex:1;min-width:0;display:flex;flex-direction:column;gap:12px}
+.callouts .co{display:flex;gap:12px;align-items:flex-start}
+.callouts .co .bd{width:34px;height:34px;font-size:18px;margin-top:2px}
+.callouts .co p{font-size:23px;line-height:1.38}
+/* prompt cards */
+.pq{background:#F7F5FA;border:1.5px solid #DDD3E8;border-right:7px solid #7A4A95;border-radius:12px;padding:14px 20px;font-size:24px;line-height:1.45;display:flex;gap:14px;align-items:flex-start}
+.pq .n{flex:none;display:grid;place-items:center;width:36px;height:36px;border-radius:9px;background:#7A4A95;color:#fff;font-weight:800;font-size:18px}
+.pq .how{display:block;font-size:19px;color:#7A4A95;font-weight:700}
+/* canvas mock */
+.cmock{flex:none;width:560px;height:400px;border:2px solid #CFCAC2;border-radius:16px;overflow:hidden;display:flex;background:#fff;box-shadow:0 10px 30px rgba(0,0,0,.08)}
+.cmock .chatp{flex:none;width:200px;background:#F7F6F4;padding:14px 12px;display:flex;flex-direction:column;gap:10px;border-left:1.5px solid #E2DED7}
+.cmock .cb{border-radius:12px;padding:8px 10px;font-size:15px;line-height:1.35}
+.cmock .cb.me{background:var(--accent-pale)} .cmock .cb.ai{background:#fff;border:1px solid #E2DED7}
+.cmock .doc{flex:1;padding:16px 20px;position:relative;display:flex;flex-direction:column;gap:9px}
+.cmock .tb{display:flex;gap:6px;margin-bottom:6px}
+.cmock .tb span{font-size:12.5px;border:1px solid #CFCAC2;border-radius:10px;padding:2px 8px;color:var(--ink);background:#fff}
+.cmock .dt{font-size:20px;font-weight:800;color:var(--ink)}
+.cmock .l{height:10px;border-radius:4px;background:#E2DED7}
+.cmock .l.sel{background:#FFE08A}
+.cmock .ask2{position:absolute;left:26px;top:214px;background:#fff;border:2px solid var(--accent-2);border-radius:12px;padding:6px 12px;font-size:15px;box-shadow:0 6px 16px rgba(0,0,0,.12)}
+/* doc to slides */
+.flow{display:flex;align-items:center;gap:22px;justify-content:center;margin:4px 0 18px}
+.docic{width:92px;height:118px;border:3px solid var(--accent-dk);border-radius:8px;background:#fff;padding:14px 12px;display:flex;flex-direction:column;gap:8px}
+.docic i{display:block;height:7px;border-radius:3px;background:#CFE3BC}
+.minis{display:flex;gap:10px}
+.mini{width:122px;height:70px;border-radius:7px;background:var(--accent-tint);border:2px solid var(--accent);padding:8px;display:flex;flex-direction:column;gap:6px}
+.mini i{display:block;height:7px;border-radius:3px;background:var(--accent)}
+.mini i+i{background:#CFE3BC;width:70%}
+.sldchip{background:#F4B400;color:#3A2A00;font-weight:800;font-size:20px;border-radius:10px;padding:12px 16px;text-align:center;line-height:1.2}
+.flow .ar{font-size:34px;color:var(--accent);font-weight:800}
+</style>
+</head>
+<body>
+<div id="stage"><div id="deck">
+
+<!-- 1 title -->
+<section class="slide mid">
+  <div class="title-wrap" style="align-items:center;text-align:center">
+    <img src="assets/logo-1400.png" alt="תום הגלעדי" style="width:360px;margin-bottom:26px">
+    <h1 style="font-size:76px">ג'מיני הלכה למעשה</h1>
+    <div class="rule" style="margin:22px auto"></div>
+    <p class="lead dim">השתלמות בינה מלאכותית בחינוך</p>
+    <p style="margin-top:26px;font-size:26px">תום הגלעדי<br><span class="dim">מפגש 2 &middot; תיכון גולדה פתח תקווה &middot; 24.11.2026</span></p>
+  </div>
+</section>
+
+<!-- 2 last time -->
+<section class="slide" style="justify-content:center">
+  <div class="kicker">מפגש 1 &middot; 10.11</div>
+  <h2>בפעם הקודמת</h2>
+  <div class="g4c">
+    <div class="rc f"><div class="k">01</div><p>שאלון של שתי דקות, <b>וג'מיני ניתח</b> את התשובות</p></div>
+    <div class="rc f"><div class="k">02</div><p>שאלות יצירתיות: <b>"מה מעניין לשאול על פוטוסינתזה?"</b></p></div>
+    <div class="rc f"><div class="k">03</div><p>סטוריבוק: <b>מי עושה את עבודת החשיבה</b> - התלמיד, או הכלי?</p></div>
+    <div class="rc f"><div class="k">04</div><p>הילד שיצר תמונות של מסי, <b>ותחושת המסוגלות</b> שקיבל</p></div>
+  </div>
+  <div class="ask f"><i></i><div><b>ניסיתם משהו מאז בכיתה?</b><br><span>שתיים-שלוש דוגמאות, בלי שמות של תלמידים.</span></div></div>
+</section>
+
+<!-- 3 what the form showed -->
+<section class="slide" style="justify-content:center">
+  <div class="kicker">השאלון &middot; 14 מורים ענו &middot; כולם השתמשו בבינה בשבועיים שלפני המפגש, 11 מהם "הרבה"</div>
+  <h2 style="margin-bottom:16px">מה השאלון הראה</h2>
+  <div class="charts">
+    <div class="chart f" data-step="1">
+      <h4>באילו כלים</h4>
+      <div class="brow"><span class="lb"><span class="en">ChatGPT</span></span><div class="tr"><div class="bar" style="width:85.7%"></div></div><span class="v">12</span></div>
+      <div class="brow"><span class="lb"><span class="en">Tab</span></span><div class="tr"><div class="bar" style="width:71.4%"></div></div><span class="v">10</span></div>
+      <div class="brow"><span class="lb">ג'מיני</span><div class="tr"><div class="bar" style="width:64.3%"></div></div><span class="v">9</span></div>
+      <div class="brow"><span class="lb"><span class="en">Gemini Notebook</span></span><div class="tr"><div class="bar" style="width:42.9%"></div></div><span class="v">6</span></div>
+      <div class="brow"><span class="lb">קלוד</span><div class="tr"><div class="bar" style="width:35.7%"></div></div><span class="v">5</span></div>
+    </div>
+    <div class="chart f" data-step="2">
+      <h4>בשביל מה</h4>
+      <div class="brow"><span class="lb">חומרי לימוד ומצגות</span><div class="tr"><div class="bar" style="width:92.9%"></div></div><span class="v">13</span></div>
+      <div class="brow"><span class="lb">מבחנים ומשימות</span><div class="tr"><div class="bar" style="width:78.6%"></div></div><span class="v">11</span></div>
+      <div class="brow hot"><span class="lb">משוב ובדיקת עבודות</span><div class="tr"><div class="bar hot" style="width:28.6%"></div></div><span class="v">4</span></div>
+      <div class="brow"><span class="lb">מיילים ומסמכים</span><div class="tr"><div class="bar" style="width:28.6%"></div></div><span class="v">4</span></div>
+      <div class="brow hot"><span class="lb">התאמה לרמות שונות</span><div class="tr"><div class="bar hot" style="width:21.4%"></div></div><span class="v">3</span></div>
+    </div>
+  </div>
+  <p class="concl f" data-step="3">הבינה כבר אצלכם בהכנת חומרים. <span class="r">כמעט לא במשוב ובהתאמה לרמות</span> - ולשם הולך העוזר שנבנה היום.</p>
+</section>
+
+<section class="slide sep">
+  <div class="logo-card"><img src="assets/logo-1400.png" alt=""></div>
+  <div class="sq-art big" aria-hidden="true">
+    <i style="width:170px;height:170px;left:40px;top:60px;background:#fff;opacity:.9;transform:rotate(24deg)"></i>
+    <i style="width:104px;height:104px;left:250px;top:10px;background:var(--accent-2);transform:rotate(-14deg)"></i>
+    <i style="width:130px;height:130px;left:240px;top:170px;border:11px solid #fff;transform:rotate(38deg)"></i>
+    <i style="width:70px;height:70px;left:20px;top:260px;background:#5E9A28;transform:rotate(12deg)"></i>
+  </div>
+  <div class="kicker">מפגש 2 מתוך 7</div>
+  <h2 style="color:#fff;margin-bottom:14px">מה נעשה היום</h2>
+  <div class="agcard">
+    <div class="ai"><span class="n">01</span><div><b>ג'מים וסקילים</b><span class="d">עוזר שבונים פעם אחת</span></div></div>
+    <div class="ai"><span class="n">02</span><div><b>בונים עוזר משלכם</b><span class="d">משוב לפי מחוון, או שלוש רמות</span></div></div>
+    <div class="ai"><span class="n">03</span><div><b>להתמצא בג'מיני</b><span class="d">מה יש איפה</span></div></div>
+    <div class="ai"><span class="n">04</span><div><b>ג'מיני מחובר</b><span class="d">היומן, המייל והדרייב</span></div></div>
+    <div class="ai"><span class="n">05</span><div><b>קנבס</b><span class="d">מסמך, ואז מצגת ממנו</span></div></div>
+  </div>
+</section>
+
+<section class="slide sep">
+  <div class="logo-card"><img src="assets/logo-1400.png" alt=""></div>
+  <div class="sq-art big" aria-hidden="true">
+    <i style="width:170px;height:170px;left:40px;top:60px;background:#fff;opacity:.9;transform:rotate(24deg)"></i>
+    <i style="width:104px;height:104px;left:250px;top:10px;background:var(--accent-2);transform:rotate(-14deg)"></i>
+    <i style="width:130px;height:130px;left:240px;top:170px;border:11px solid #fff;transform:rotate(38deg)"></i>
+    <i style="width:70px;height:70px;left:20px;top:260px;background:#5E9A28;transform:rotate(12deg)"></i>
+  </div>
+  <div class="kicker">מה נעשה היום &middot; 01</div>
+  <h2 style="color:#fff;margin-bottom:14px">ג'מים וסקילים</h2>
+  <div class="agcard">
+    <div class="ai act"><span class="n">01</span><div><b>ג'מים וסקילים</b><span class="d">עוזר שבונים פעם אחת</span></div></div>
+    <div class="ai"><span class="n">02</span><div><b>בונים עוזר משלכם</b><span class="d">משוב לפי מחוון, או שלוש רמות</span></div></div>
+    <div class="ai"><span class="n">03</span><div><b>להתמצא בג'מיני</b><span class="d">מה יש איפה</span></div></div>
+    <div class="ai"><span class="n">04</span><div><b>ג'מיני מחובר</b><span class="d">היומן, המייל והדרייב</span></div></div>
+    <div class="ai"><span class="n">05</span><div><b>קנבס</b><span class="d">מסמך, ואז מצגת ממנו</span></div></div>
+  </div>
+</section>
+
+<!-- 6 what is a gem -->
+<section class="slide" style="justify-content:center">
+  <h2>מה זה ג'ם?</h2>
+  <p class="lead" style="margin-bottom:30px">עוזר שבונים <span class="r">פעם אחת</span>. כותבים לו הוראות קבועות, ואפשר לצרף לו קבצים.</p>
+  <div class="boxes">
+    <div class="bx"><b>שם</b><span>"מורה פרטית למתמטיקה"</span></div>
+    <div class="plus">+</div>
+    <div class="bx"><b>הוראות</b><span>מה לעשות, ומה לא</span></div>
+    <div class="plus">+</div>
+    <div class="bx"><b>קבצים</b><span>סילבוס, מחוון, דף הנחיות</span></div>
+    <div class="arrow" style="font-size:44px">&larr;</div>
+    <div class="bx out"><b>כל שיחה מתחילה מכאן</b></div>
+  </div>
+  <p class="f big" style="margin-top:36px;text-align:center">כמו לתדרך מורה מחליף <span class="g">פעם אחת</span>,<br>במקום לפני כל שיעור מחדש.</p>
+</section>
+
+<!-- 7 what is a skill -->
+<section class="slide">
+  <div class="kicker">גוגל: "סקיל הוא קבוצה של פרומפטים בסיסיים שאפשר להשתמש בהם שוב ושוב"</div>
+  <h2 style="margin-bottom:6px">ומה זה סקיל? ולמה צריך אותו</h2>
+  <p style="font-size:27px;margin-bottom:16px">בונים סקיל <span class="r">למשימה שחוזרת על עצמה</span>, באותן הוראות. כותבים פעם אחת, ומשתמשים בכל מקום.</p>
+  <div class="cmp">
+    <div class="h gem">ג'ם</div><div class="h skl">סקיל</div>
+    <div class="c f" data-step="1"><b>נכנסים אליו.</b> שיחה נפרדת, עם עוזר אחד.</div><div class="c skl f" data-step="1"><b>מגיע אליכם,</b> לכל שיחה: מקלידים <b class="en">/</b> או <b class="en">@</b> ובוחרים.</div>
+    <div class="c f" data-step="2"><b>אחד בכל פעם.</b></div><div class="c skl f" data-step="2"><b>כמה ביחד</b> באותה שיחה: "שלוש רמות" יחד עם "המשוב שלי".</div>
+    <div class="c f" data-step="3"><b>רק כשפותחים אותו.</b></div><div class="c skl f" data-step="3"><b>ג'מיני יכול להפעיל לבד,</b> כשהבקשה מתאימה.</div>
+  </div>
+  <p class="f small" data-step="4" style="margin-top:14px;font-size:22px">סקילים - מגיל 18, ובינתיים בחשבון פרטי. הם לא עובדים בתוך קנבס או מחקר מעמיק.</p>
+</section>
+
+<!-- 8 skill examples -->
+<section class="slide" style="justify-content:center">
+  <h2>דוגמאות לסקילים</h2>
+  <div class="big2" style="margin-top:8px">
+    <div class="bc" style="background:#fff;border-color:var(--line)">
+      <h4 style="color:var(--ink)">מהדוגמאות של גוגל</h4>
+      <ul class="dots">
+        <li style="font-size:25px;margin:10px 0">עזרה בשיעורי בית שלא נותנת תשובות</li>
+        <li style="font-size:25px;margin:10px 0">"עוד נקודות מבט": תמיד שלוש עד חמש עמדות שונות על כל נושא</li>
+        <li style="font-size:25px;margin:10px 0">סקיל בניית מצגות</li>
+        <li style="font-size:25px;margin:10px 0">כתיבה בסגנון שלי</li>
+      </ul>
+    </div>
+    <div class="bc f">
+      <h4>ולמורים</h4>
+      <ul class="dots">
+        <li style="font-size:25px;margin:10px 0"><b>"המשוב שלי"</b> - שתי נקודות חוזק, אחת לשיפור ושאלה, בכל בקשת משוב</li>
+        <li style="font-size:25px;margin:10px 0"><b>"שלוש רמות"</b> - כל חומר הופך לדף בשלוש רמות</li>
+        <li style="font-size:25px;margin:10px 0"><b>"בלי שמות"</b> - עוצר כשמדביקים פרט מזהה של תלמיד</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 9 gems to skills -->
+<section class="slide" style="justify-content:center">
+  <h2>ג'מים הופכים לסקילים</h2>
+  <div class="lanes" style="margin-top:10px">
+    <div class="lane priv">
+      <div class="who">חשבון פרטי</div>
+      <div class="pt past"><span class="d">17.11.2026</span><p>הג'מים לקריאה בלבד</p></div>
+      <div class="pt"><span class="d">17.12.2026</span><p>הג'מים נמחקים. קבצים שצירפתם - הורידו לפני</p></div>
+      <div class="pt"><span class="d">מעכשיו</span><p>בונים סקיל, עם אותן הוראות</p></div>
+    </div>
+    <div class="lane moe">
+      <div class="who">חשבון משרד החינוך</div>
+      <div class="pt"><span class="d">היום</span><p>יוצרים ומשתמשים בג'מים, כרגיל</p></div>
+      <div class="pt"><span class="d">יוני 2027</span><p>רק אז הג'מים הופכים לסקילים</p></div>
+    </div>
+  </div>
+  <p class="f big" style="margin-top:30px;font-weight:500">היום: בונים <span class="g">ג'ם בחשבון של המשרד</span>. בחשבון פרטי - <span class="r">סקיל</span>, עם אותן הוראות.</p>
+</section>
+
+<!-- 10 how to build -->
+<section class="slide" style="justify-content:center">
+  <h2>איך בונים ג'ם, או סקיל</h2>
+  <div class="cols" style="align-items:stretch;margin-top:6px">
+    <div class="howcard moe">
+      <h4>ג'ם</h4><div class="sub">בחשבון של משרד החינוך</div>
+      <div class="chips"><span class="chip">Gems</span><span class="ar">&larr;</span><span class="chip">Gem חדש</span><span class="ar">&larr;</span><span class="chip">שם והוראות</span><span class="ar">&larr;</span><span class="chip">ידע: קבצים</span><span class="ar">&larr;</span><span class="chip">שמירה</span></div>
+      <p style="font-size:21px;margin-top:12px">לא רואים <span class="en">Gems</span> בתפריט הצד? חפשו בהגדרות.</p>
+    </div>
+    <div class="howcard priv">
+      <h4>סקיל</h4><div class="sub">בחשבון פרטי</div>
+      <div class="chips"><span class="chip">התאמה אישית</span><span class="ar">&larr;</span><span class="chip">סקילים</span><span class="ar">&larr;</span><span class="chip">יצירה</span><span class="ar">&larr;</span><span class="chip">יצירה ידנית</span><span class="ar">&larr;</span><span class="chip">מדביקים הוראות</span></div>
+      <p style="font-size:21px;margin-top:12px">או "יצירה באמצעות <span class="en">Gemini</span>", ומתארים במילים.</p>
+    </div>
+  </div>
+  <div class="note f" style="margin-top:24px">לא חייבים לכתוב את ההוראות לבד. תארו לג'מיני מה העוזר צריך לעשות, ובקשו שינסח.</div>
+</section>
+
+<!-- 11 five assistants -->
+<section class="slide">
+  <div class="kicker">התנסות &middot; <span class="tm">כ-20 דקות</span></div>
+  <h2 style="margin-bottom:12px">חמישה עוזרים מוכנים - בחרו אחד ובנו</h2>
+  <div style="display:flex;gap:34px;flex:1;min-height:0;align-items:center">
+    <div style="flex:1;min-width:0">
+      <ol class="gems">
+        <li class="f" data-step="1"><span class="n">1</span><span><b>מורה פרטית</b> - לא נותנת תשובה, מובילה צעד אחר צעד</span></li>
+        <li class="f hl" data-step="2"><span class="n">2</span><span><b>דף עבודה בשלוש רמות</b> - עם מפתח תשובות למורה<span class="pill">מומלץ להיום</span></span></li>
+        <li class="f hl" data-step="3"><span class="n">3</span><span><b>עוזר משוב לפי מחוון</b> - תלמידים לפי מספר בלבד, בלי ציון<span class="pill">מומלץ להיום</span></span></li>
+        <li class="f" data-step="4"><span class="n">4</span><span><b>מתכנן סטוריבוק פדגוגי</b> - מטרה, פרומפט, משימה לתלמיד, ואיך בודקים</span></li>
+        <li class="f" data-step="5"><span class="n">5</span><span><b>בונה מחוונים</b> - יעזור גם במטלת הסיכום</span></li>
+      </ol>
+      <p class="f" data-step="6" style="font-size:23px;margin-top:14px">למה 2 או 3? <span class="r">בדיוק שם</span> השאלון הראה שהבינה עוד לא נכנסה. בדף: עורכים את ההוראות למקצוע שלכם, מעתיקים, ובונים.</p>
+    </div>
+    <div class="qrcol f" data-step="7" style="width:250px">
+      <div class="qrbox"><img src="assets/qr-app.png" alt="ברקוד לדף ההנחיות לתרגול"></div>
+      <span class="url">tomhagiladi.github.io/<br>golda-gemini-24-11-26</span>
+      <div class="where"><span>בדף:</span><b>חמישה עוזרים</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- 12 test and share -->
+<section class="slide" style="justify-content:center">
+  <div class="kicker">התנסות &middot; <span class="tm">כ-5 דקות</span></div>
+  <h2 style="margin-bottom:22px">בודקים את העוזר, ומשתפים</h2>
+  <div class="chain">
+    <div class="lk f"><div class="k">01 &middot; מריצים</div><p>על חומר אמיתי מהשבוע: עבודה של תלמיד, <span class="r">בלי שם</span>. או דף שאתם כבר מלמדים ממנו.</p></div>
+    <div class="arrow">&larr;</div>
+    <div class="lk f"><div class="k">02 &middot; מתקנים</div><p>לא מה שרציתם? <b>לא כותבים מחדש.</b> אומרים לו במילים מה לתקן, ומעדכנים את ההוראות.</p></div>
+    <div class="arrow">&larr;</div>
+    <div class="lk f"><div class="k">03 &middot; משתפים</div><p>שלוש דקות בקבוצה: <b>מי בנה מה,</b> ומה הפתיע.</p></div>
+  </div>
+</section>
+
+<!-- 13 break -->
+<section class="slide mid">
+  <div class="fill" style="align-items:center;gap:20px">
+    <h2 style="margin:0">הפסקה</h2>
+    <div id="tm">10:00</div>
+    <p id="back" class="lead dim" style="min-height:50px"></p>
+    <button class="timer-btn" id="tmbtn" type="button">הפעלת טיימר</button>
+    <p style="font-size:26px;margin-top:8px">אחרי ההפסקה: <b class="g">להתמצא בג'מיני, לחבר את היומן, וקנבס.</b> חוזרים עם מחשב פתוח.</p>
+  </div>
+</section>
+
+<section class="slide sep">
+  <div class="logo-card"><img src="assets/logo-1400.png" alt=""></div>
+  <div class="sq-art big" aria-hidden="true">
+    <i style="width:170px;height:170px;left:40px;top:60px;background:#fff;opacity:.9;transform:rotate(24deg)"></i>
+    <i style="width:104px;height:104px;left:250px;top:10px;background:var(--accent-2);transform:rotate(-14deg)"></i>
+    <i style="width:130px;height:130px;left:240px;top:170px;border:11px solid #fff;transform:rotate(38deg)"></i>
+    <i style="width:70px;height:70px;left:20px;top:260px;background:#5E9A28;transform:rotate(12deg)"></i>
+  </div>
+  <div class="kicker">מה נעשה היום &middot; 03</div>
+  <h2 style="color:#fff;margin-bottom:14px">להתמצא בג'מיני</h2>
+  <div class="agcard">
+    <div class="ai"><span class="n">01</span><div><b>ג'מים וסקילים</b><span class="d">עוזר שבונים פעם אחת</span></div></div>
+    <div class="ai"><span class="n">02</span><div><b>בונים עוזר משלכם</b><span class="d">משוב לפי מחוון, או שלוש רמות</span></div></div>
+    <div class="ai act"><span class="n">03</span><div><b>להתמצא בג'מיני</b><span class="d">מה יש איפה</span></div></div>
+    <div class="ai"><span class="n">04</span><div><b>ג'מיני מחובר</b><span class="d">היומן, המייל והדרייב</span></div></div>
+    <div class="ai"><span class="n">05</span><div><b>קנבס</b><span class="d">מסמך, ואז מצגת ממנו</span></div></div>
+  </div>
+</section>
+
+<!-- 15 which account -->
+<section class="slide" style="justify-content:center">
+  <h2>באיזה חשבון אתם?</h2>
+  <div class="acc" style="margin-top:6px">
+    <div class="acol moe"><b>נכנסתם עם החשבון של משרד החינוך?</b><span class="to">החיבור יגיע למייל, ליומן ולדרייב של המשרד</span></div>
+    <div class="acol priv"><b>נכנסתם עם החשבון הפרטי?</b><span class="to">החיבור יגיע למייל הפרטי שלכם</span></div>
+  </div>
+  <ul class="dots" style="margin-top:16px">
+    <li class="f" style="font-size:25px;margin:8px 0">עובדים ביום-יום עם המייל הפרטי? <span class="r">עברו קודם לחשבון הפרטי</span> בג'מיני, ורק אז חברו.</li>
+    <li class="f" style="font-size:25px;margin:8px 0"><b>איך עוברים:</b> תמונת הפרופיל בפינה העליונה &larr; בוחרים חשבון. אין אותו? "הוספת חשבון".</li>
+    <li class="f" style="font-size:25px;margin:8px 0"><b>איך יודעים איפה אתם:</b> ליד תמונת הפרופיל של חשבון בית ספר מופיע הלוגו של הארגון, או התווית <span class="en">EDU</span>.</li>
+    <li class="f" style="font-size:25px;margin:8px 0"><b>וזה משנה גם את המסך:</b> בחשבון של המשרד אין צ'אט זמני ואין זיכרון, ובחירת המודל נראית אחרת.</li>
+  </ul>
+</section>
+
+<!-- 16 screen map -->
+<section class="slide">
+  <div class="kicker">הדגמה חיה &middot; זו מפה, לא צילום. המסך משתנה מחשבון לחשבון</div>
+  <h2 style="margin-bottom:14px">מפה של המסך</h2>
+  <div class="map">
+    <div class="mock" aria-hidden="true">
+      <div class="side">
+        <div class="it">צ'אט חדש <span class="bd f" data-step="1">1</span></div>
+        <div class="it mut">חיפוש</div>
+        <div class="it">ספרייה <span class="bd f" data-step="2">2</span></div>
+        <div class="it">התאמה אישית <span class="bd f" data-step="3">3</span></div>
+        <div class="it mut">השיחות האחרונות</div>
+        <div class="ln"></div><div class="ln" style="margin-left:40px"></div><div class="ln"></div><div class="ln" style="margin-left:60px"></div>
+        <div class="sp"></div>
+        <div class="it">הגדרות <span class="bd f" data-step="4">4</span></div>
+      </div>
+      <div class="main">
+        <div class="hello">במה אפשר לעזור?</div>
+        <div class="pbox">כתבו כאן...
+          <div class="row"><span class="pl">+</span><span class="bd f" data-step="5">5</span><span class="mdl">בחירת מודל &#9662;</span><span class="bd f" data-step="6">6</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="callouts">
+      <div class="co f" data-step="1"><span class="bd">1</span><p><b>צ'אט חדש, חיפוש,</b> והשיחות האחרונות. אפשר לנעוץ שיחה למעלה.</p></div>
+      <div class="co f" data-step="2"><span class="bd">2</span><p><b>ספרייה:</b> התמונות והקבצים שיצרתם.</p></div>
+      <div class="co f" data-step="3"><span class="bd">3</span><p><b>התאמה אישית:</b> מחברים (מייל, יומן, דרייב) וסקילים.</p></div>
+      <div class="co f" data-step="4"><span class="bd">4</span><p><b>הגדרות:</b> היסטוריה, והוראות קבועות לג'מיני.</p></div>
+      <div class="co f" data-step="5"><span class="bd">5</span><p><b>הפלוס:</b> קבצים, מחקר מעמיק, <span class="r">קנבס</span>, ועוד כלים.</p></div>
+      <div class="co f" data-step="6"><span class="bd">6</span><p><b>בתחתית התיבה:</b> בחירת המודל. מה שמופיע שם - לפי החשבון.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 17 five minute tour -->
+<section class="slide">
+  <div class="kicker">התנסות &middot; <span class="tm">כ-5 דקות</span></div>
+  <h2 style="margin-bottom:16px">סיור של חמש דקות</h2>
+  <div style="display:flex;gap:34px;flex:1;min-height:0;align-items:center">
+    <div class="vsteps" style="flex:1;min-width:0">
+      <div class="vstep f"><span class="k">1</span><p>בדקו <b>באיזה חשבון</b> אתם</p></div>
+      <div class="vstep f"><span class="k">2</span><p>חפשו שיחה קודמת שלכם, <b>ונעצו אותה</b></p></div>
+      <div class="vstep f"><span class="k">3</span><p>פתחו את <b>הפלוס</b>: מה יש שם?</p></div>
+      <div class="vstep f"><span class="k">4</span><p>בתחתית התיבה: <b>אילו מודלים</b> אתם רואים?</p></div>
+      <div class="vstep f"><span class="k">5</span><p>היכנסו להגדרות ומצאו את <b>ההיסטוריה</b>. ואיפה <span class="r">הג'מים</span>?</p></div>
+    </div>
+    <div class="qrcol f" style="width:250px">
+      <div class="qrbox"><img src="assets/qr-tour.png" alt="ברקוד לסיור בדף ההנחיות לתרגול"></div>
+      <span class="url">tomhagiladi.github.io/<br>golda-gemini-24-11-26</span>
+      <div class="where"><span>בדף:</span><b>הסיור</b></div>
+    </div>
+  </div>
+</section>
+
+<section class="slide sep">
+  <div class="logo-card"><img src="assets/logo-1400.png" alt=""></div>
+  <div class="sq-art big" aria-hidden="true">
+    <i style="width:170px;height:170px;left:40px;top:60px;background:#fff;opacity:.9;transform:rotate(24deg)"></i>
+    <i style="width:104px;height:104px;left:250px;top:10px;background:var(--accent-2);transform:rotate(-14deg)"></i>
+    <i style="width:130px;height:130px;left:240px;top:170px;border:11px solid #fff;transform:rotate(38deg)"></i>
+    <i style="width:70px;height:70px;left:20px;top:260px;background:#5E9A28;transform:rotate(12deg)"></i>
+  </div>
+  <div class="kicker">מה נעשה היום &middot; 04</div>
+  <h2 style="color:#fff;margin-bottom:14px">ג'מיני מחובר</h2>
+  <div class="agcard">
+    <div class="ai"><span class="n">01</span><div><b>ג'מים וסקילים</b><span class="d">עוזר שבונים פעם אחת</span></div></div>
+    <div class="ai"><span class="n">02</span><div><b>בונים עוזר משלכם</b><span class="d">משוב לפי מחוון, או שלוש רמות</span></div></div>
+    <div class="ai"><span class="n">03</span><div><b>להתמצא בג'מיני</b><span class="d">מה יש איפה</span></div></div>
+    <div class="ai act"><span class="n">04</span><div><b>ג'מיני מחובר</b><span class="d">היומן, המייל והדרייב</span></div></div>
+    <div class="ai"><span class="n">05</span><div><b>קנבס</b><span class="d">מסמך, ואז מצגת ממנו</span></div></div>
+  </div>
+</section>
+
+<!-- 19 gemini that knows your mail, calendar, drive -->
+<section class="slide" style="justify-content:center">
+  <h2 style="margin-bottom:16px">ג'מיני שמכיר את המייל, היומן והדרייב שלכם</h2>
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px">
+    <div class="wc f"><span class="ic">מייל</span><p>"מה מבקשים ממני השבוע?" - סיכום מיילים מההנהלה ומרכזי השכבה, לפי תאריך יעד</p></div>
+    <div class="wc f"><span class="ic">יומן</span><p>"איפה יש לי שעה פנויה לבדיקת עבודות?"</p></div>
+    <div class="wc f"><span class="ic">יומן</span><p>מצלמים חוזר או לוח מבחנים: <b>"הוסיפי ליומן"</b></p></div>
+    <div class="wc f"><span class="ic">דרייב</span><p>"מצאי את המצגת שלי על... והכיני ממנה שאלות חזרה"</p></div>
+    <div class="wc f" style="grid-column:span 2"><span class="ic" style="background:var(--accent-2)">יחד</span><p>"מצאי את המייל על הטיול והוסיפי ליומן - <span class="r">אבל קודם תראי לי</span>"</p></div>
+  </div>
+  <div class="note f" style="margin-top:18px">ג'מיני <b>לא שואל</b> לפני שהוא יוצר אירוע. הוא יוצר, ואחר כך מופיע "ביטול". לכן כדאי לבקש: <b>"קודם תראי לי, ורק אז תוסיפי"</b>.</div>
+</section>
+
+<!-- 20 how to connect -->
+<section class="slide" style="justify-content:center">
+  <h2 style="margin-bottom:14px">איך מחברים</h2>
+  <p style="font-size:27px"><b>הכי פשוט:</b> מבקשים "מה יש לי מחר ביומן?". לא מחובר? <span class="g">ג'מיני מציע לחבר.</span></p>
+  <div class="chips" style="margin:16px 0 6px"><span style="font-size:24px;font-weight:700">או:</span><span class="chip">התאמה אישית</span><span class="ar">&larr;</span><span class="chip">מחברים</span><span class="ar">&larr;</span><span class="chip">הוספה</span><span style="font-size:24px;margin-right:8px">או כותבים <b class="en">@</b> בצ'אט, ובוחרים.</span></div>
+  <ul class="dots" style="margin-top:8px">
+    <li class="f" style="font-size:25px;margin:9px 0"><b>חיבור אחד מחבר הכול:</b> היומן, המייל והדרייב הם אותה אפליקציה מחוברת.</li>
+    <li class="f" style="font-size:25px;margin:9px 0">מזכירים את היומן <b>בבקשה הראשונה</b>. בהמשך אותה שיחה הוא כבר יודע.</li>
+    <li class="f" style="font-size:25px;margin:9px 0"><b>תנאי:</b> ההיסטוריה מופעלת. <span class="dim">(בפעם הקודמת זה נקרא "שמירת הפעילות" - גוגל שינתה את השם.)</span></li>
+    <li class="f" style="font-size:25px;margin:9px 0"><b>בחשבון של המשרד:</b> מנהל המערכת מחליט. ברירת המחדל - פתוח.</li>
+  </ul>
+</section>
+
+<!-- 21 privacy -->
+<section class="slide" style="justify-content:center">
+  <h2>מה זה אומר על הפרטיות שלכם</h2>
+  <div class="p4" style="margin-top:6px">
+    <div class="pc4 priv f"><h4>חשבון פרטי</h4><p>כשההיסטוריה מופעלת, מה שג'מיני קורא יכול לשמש לאימון, וחלקו נקרא בידי בודקים.</p></div>
+    <div class="pc4 moe f"><h4>חשבון משרד החינוך</h4><p>בלי אימון, ובלי בודקים.</p></div>
+    <div class="pc4 risk f"><h4>הסיכון</h4><p>הוראות מוסתרות במייל, או בהזמנה ליומן.</p></div>
+    <div class="pc4 min f"><h4>משרד החינוך</h4><p>אין להכניס מידע מזהה של תלמידים.</p></div>
+  </div>
+  <p class="small f" style="margin-top:16px;font-size:21px">כל הפרטים והמקורות - בדף ההנחיות לתרגול.</p>
+</section>
+
+<!-- 22 history -->
+<section class="slide">
+  <h2 style="margin-bottom:12px">היסטוריה: איפה, ומה משתנה</h2>
+  <div class="chips"><span class="chip">הגדרות</span><span class="ar">&larr;</span><span class="chip">היסטוריה</span><span class="ar">&larr;</span><span class="chip">מופעלת</span><span class="ar">&larr;</span><span class="chip">השבתה</span></div>
+  <p style="font-size:24px;margin:14px 0 16px"><b>או באמצע הדרך:</b> משאירים מופעלת, ומקצרים את המחיקה האוטומטית מ-18 חודשים <span class="r">ל-3</span>.</p>
+  <div class="onoff">
+    <div class="oo on f" data-step="1"><h4>מופעלת</h4><ul>
+      <li>נשמרת 18 חודשים, כברירת מחדל</li>
+      <li>בחשבון פרטי: יכולה לשמש לאימון, וחלק נקרא בידי בודקים</li>
+      <li>החיבור למייל וליומן עובד, וגם סקילים</li></ul></div>
+    <div class="oo off f" data-step="2"><h4>מושבתת</h4><ul>
+      <li>לא מופיעה בהיסטוריה ולא משמשת לאימון</li>
+      <li>ועדיין נשמרת בחשבון <b>כחודשיים</b></li>
+      <li>אין חיבור למייל וליומן, ואין סקילים</li></ul></div>
+  </div>
+  <p class="f" data-step="3" style="font-size:23px;margin-top:12px">בחשבון של משרד החינוך: את ההגדרה קובע <b>מנהל המערכת</b>, לא אתם.</p>
+</section>
+
+<!-- 23 try: three calendar requests -->
+<section class="slide">
+  <div class="kicker">התנסות &middot; <span class="tm">כ-8 דקות</span></div>
+  <h2 style="margin-bottom:14px">נסו: שלוש בקשות ליומן</h2>
+  <div style="display:flex;gap:34px;flex:1;min-height:0;align-items:center">
+    <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:12px">
+      <div class="pq f" data-step="1"><span class="n">1</span><span>"מה יש לי ביומן השבוע? סדרי לפי ימים, וסמני איפה יש חור של שעה."</span></div>
+      <div class="pq f" data-step="2"><span class="n">2</span><span>"קבעי לי שעה לבדיקת עבודות ביום רביעי אחרי 16:00. <b>קודם הראי לי,</b> ורק אז תוסיפי."</span></div>
+      <div class="pq f" data-step="3"><span class="n">3</span><span><span class="how">מצלמים חוזר או הודעה מבית הספר, ומצרפים:</span>"מצאי כאן תאריכים והוסיפי ליומן. <b>קודם הראי לי.</b>"</span></div>
+      <p class="f" data-step="4" style="font-size:23px">ובדף: <span class="g">עוד עשר בקשות</span> למייל, ליומן, לדרייב ולשילוב ביניהם.</p>
+    </div>
+    <div class="qrcol f" data-step="5" style="width:250px">
+      <div class="qrbox"><img src="assets/qr-ws.png" alt="ברקוד לבקשות ליומן, למייל ולדרייב בדף ההנחיות לתרגול"></div>
+      <span class="url">tomhagiladi.github.io/<br>golda-gemini-24-11-26</span>
+      <div class="where"><span>בדף:</span><b>יומן, מייל ודרייב</b></div>
+    </div>
+  </div>
+</section>
+
+<section class="slide sep">
+  <div class="logo-card"><img src="assets/logo-1400.png" alt=""></div>
+  <div class="sq-art big" aria-hidden="true">
+    <i style="width:170px;height:170px;left:40px;top:60px;background:#fff;opacity:.9;transform:rotate(24deg)"></i>
+    <i style="width:104px;height:104px;left:250px;top:10px;background:var(--accent-2);transform:rotate(-14deg)"></i>
+    <i style="width:130px;height:130px;left:240px;top:170px;border:11px solid #fff;transform:rotate(38deg)"></i>
+    <i style="width:70px;height:70px;left:20px;top:260px;background:#5E9A28;transform:rotate(12deg)"></i>
+  </div>
+  <div class="kicker">מה נעשה היום &middot; 05</div>
+  <h2 style="color:#fff;margin-bottom:14px">קנבס</h2>
+  <div class="agcard">
+    <div class="ai"><span class="n">01</span><div><b>ג'מים וסקילים</b><span class="d">עוזר שבונים פעם אחת</span></div></div>
+    <div class="ai"><span class="n">02</span><div><b>בונים עוזר משלכם</b><span class="d">משוב לפי מחוון, או שלוש רמות</span></div></div>
+    <div class="ai"><span class="n">03</span><div><b>להתמצא בג'מיני</b><span class="d">מה יש איפה</span></div></div>
+    <div class="ai"><span class="n">04</span><div><b>ג'מיני מחובר</b><span class="d">היומן, המייל והדרייב</span></div></div>
+    <div class="ai act"><span class="n">05</span><div><b>קנבס</b><span class="d">מסמך, ואז מצגת ממנו</span></div></div>
+  </div>
+</section>
+
+<!-- 25 what is canvas -->
+<section class="slide">
+  <h2 style="margin-bottom:14px">מה זה קנבס?</h2>
+  <div style="display:flex;gap:36px;flex:1;min-height:0;align-items:center">
+    <div style="flex:1;min-width:0">
+      <ul class="dots">
+        <li class="f" style="font-size:25px;margin:10px 0"><b>מסך מפוצל:</b> הצ'אט בצד אחד, המסמך בצד השני.</li>
+        <li class="f" style="font-size:25px;margin:10px 0"><b>איפה:</b> הפלוס בתיבת הכתיבה &larr; קנבס. ואז כותבים מה רוצים.</li>
+        <li class="f" style="font-size:25px;margin:10px 0">כותבים <b>ישירות בתוך המסמך</b>, או <span class="r">מסמנים קטע</span> ומבקשים לשנות רק אותו.</li>
+        <li class="f" style="font-size:25px;margin:10px 0"><b>מהמחשב.</b> בטלפון, בחשבון של המשרד, קנבס לא זמין.</li>
+      </ul>
+      <p class="f" style="font-size:25px;margin-top:16px"><b class="g">היום:</b> מסמך, ואז מצגת ממנו. <b class="g">בפעם הבאה:</b> אפליקציות.</p>
+    </div>
+    <div class="cmock" aria-hidden="true">
+      <div class="chatp">
+        <div class="cb me">כתבי דף הנחיות לעבודת חקר...</div>
+        <div class="cb ai">הנה טיוטה. אפשר לשנות כל חלק.</div>
+        <div class="cb me">פשטי את הפסקה המסומנת</div>
+      </div>
+      <div class="doc">
+        <div class="tb"><span>שינוי האורך</span><span>שינוי הטון</span><span>ייצוא</span></div>
+        <div class="dt">עבודת חקר - דף הנחיות</div>
+        <div class="l"></div><div class="l" style="width:86%"></div><div class="l" style="width:92%"></div>
+        <div class="l sel"></div><div class="l sel" style="width:78%"></div>
+        <div class="l"></div><div class="l" style="width:70%"></div><div class="l" style="width:88%"></div><div class="l" style="width:60%"></div>
+        <div class="ask2">פשטי לתלמידים מתקשים</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 26 a document in canvas -->
+<section class="slide">
+  <div class="kicker">הדגמה חיה</div>
+  <h2 style="margin-bottom:14px">מסמך בקנבס: מהבקשה ועד גוגל דוקס</h2>
+  <div class="vsteps">
+    <div class="vstep f"><span class="k">1</span><p><b>מבקשים:</b> "כתבי דף הנחיות לתלמידי י' לעבודת חקר קצרה על... עם לוח זמנים ומחוון של ארבעה קריטריונים"</p></div>
+    <div class="vstep f"><span class="k">2</span><p><b>משפרים בסרגל הכלים:</b> הצעה של שינויי עריכה &middot; שינוי האורך &middot; שינוי הטון</p></div>
+    <div class="vstep f"><span class="k">3</span><p><b>מסמנים פסקה אחת:</b> "פשטי את זה לתלמידים מתקשים"</p></div>
+    <div class="vstep f"><span class="k">4</span><p><b>לא אהבתם?</b> הגרסה הקודמת נשמרת, וחוזרים אליה בלחיצה</p></div>
+    <div class="vstep f"><span class="k">5</span><p><b>שיתוף וייצוא &larr; ייצוא אל <span class="en">Docs</span>,</b> וממשיכים לעבוד שם כרגיל</p></div>
+  </div>
+  <p class="f small" style="margin-top:14px;font-size:21px">בחשבון של המשרד ייתכן שאי אפשר לשתף קישור לקנבס. מייצאים לדוקס, ומשתפים משם.</p>
+</section>
+
+<!-- 27 from the document, a presentation -->
+<section class="slide">
+  <h2 style="margin-bottom:6px">ומהמסמך - מצגת</h2>
+  <div class="flow" aria-hidden="true">
+    <div class="docic"><i></i><i></i><i style="width:70%"></i><i></i><i style="width:80%"></i></div>
+    <span class="ar">&larr;</span>
+    <div class="minis"><div class="mini"><i></i><i></i></div><div class="mini"><i></i><i></i></div><div class="mini"><i></i><i></i></div></div>
+    <span class="ar">&larr;</span>
+    <div class="sldchip">גוגל<br>סליידס</div>
+  </div>
+  <ul class="dots">
+    <li class="f" style="font-size:24px;margin:8px 0"><b>באותו מסמך:</b> "יצירה" &larr; מצגת. או בקנבס חדש: "צרי מצגת על..." ומצרפים קובץ.</li>
+    <li class="f" style="font-size:24px;margin:8px 0">ג'מיני בונה שקופיות עם עיצוב ותמונות. <b>את הסגנון מבקשים במילים.</b></li>
+    <li class="f" style="font-size:24px;margin:8px 0">משנים דרך הצ'אט: "שקופית 3 ארוכה מדי, קצרי". כל שינוי - גרסה חדשה.</li>
+    <li class="f" style="font-size:24px;margin:8px 0"><b>ייצוא לגוגל סליידס,</b> וממשיכים לערוך שם.</li>
+  </ul>
+  <div class="note f" style="margin-top:10px">כתב טקסט במקום לבנות שקופיות? בקשו במפורש: <b>"מצגת"</b>.</div>
+</section>
+
+<!-- 28 try: a document, then a presentation -->
+<section class="slide">
+  <div class="kicker">התנסות &middot; <span class="tm">כ-10 דקות</span></div>
+  <h2 style="margin-bottom:16px">נסו: מסמך, ואז מצגת ממנו</h2>
+  <div style="display:flex;gap:30px;flex:1;min-height:0;align-items:center">
+    <div class="cols" style="flex:1;min-width:0;align-items:stretch">
+      <div class="np f" data-step="1" style="min-height:270px"><h4>1 &middot; בוחרים</h4><p>מסמך שאתם באמת צריכים בשבועיים הקרובים: דף הנחיות, מכתב להורים, סיכום לשיעור חזרה.</p></div>
+      <div class="np f" data-step="2" style="min-height:270px"><h4>2 &middot; משפרים פעמיים</h4><p>פעם בסרגל הכלים, ופעם בסימון של קטע.</p></div>
+      <div class="np f" data-step="3" style="min-height:270px"><h4>3 &middot; הופכים למצגת</h4><p>ומייצאים לגוגל סליידס.</p></div>
+    </div>
+    <div class="qrcol f" data-step="4" style="width:230px">
+      <div class="qrbox"><img src="assets/qr-canvas.png" alt="ברקוד לחלק של קנבס בדף ההנחיות לתרגול"></div>
+      <span class="url">tomhagiladi.github.io/<br>golda-gemini-24-11-26</span>
+      <div class="where"><span>בדף:</span><b>קנבס</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- 29 the final assignment -->
+<section class="slide">
+  <div class="kicker">מטלת הסיכום</div>
+  <h2 style="margin-bottom:12px">אתם בוחרים</h2>
+  <div class="big2">
+    <div class="bc f" data-step="1"><h4>אתם בוחרים את התוצר</h4><p>ממה שעשיתם באמת בכיתה: מערך שיעור עם התאמה לרמות, משימת הערכה, עזר למידה מחומרים קיימים, יישומון או משחק בווייב-קודינג, או כל דבר אחר.</p></div>
+    <div class="bc f" data-step="1"><h4>ובונים לו מחוון בעצמכם</h4><p>מחוון אובייקטיבי, עם קריטריונים ברורים, ומיישמים אותו על התוצר. העוזר "בונה מחוונים" יעזור.</p></div>
+  </div>
+  <p class="f" data-step="2" style="font-size:24px;margin-top:14px"><b>ההגשה:</b> אפשר לעבוד בזוגות, אבל <span class="r">ההגשה אישית</span> - כל אחד מגיש עבודה משלו. 2-3 עמודים: החלק היישומי, המחוון שלכם, רפלקציה, ומקורות.</p>
+  <div class="wbar f" data-step="3" style="margin-top:14px">
+    <div style="width:30%;background:var(--accent-dk)"><span>30%</span>התוצר ותהליך הלמידה</div>
+    <div style="width:25%;background:var(--accent)"><span>25%</span>המחוון שלכם</div>
+    <div style="width:30%;background:#8A4B00"><span>30%</span>הרפלקציה</div>
+    <div style="width:15%;background:#8A8781"><span>15%</span>מבנה ומקורות</div>
+  </div>
+  <p class="f" data-step="4" style="font-size:24px;margin-top:12px"><span class="g">התחילו לאסוף כבר מהיום.</span> את מועד ההגשה נתאם עם אורית לקראת הסיום.</p>
+</section>
+
+<!-- 30 until next time -->
+<section class="slide" style="justify-content:center">
+  <div class="kicker">עד הפעם הבאה</div>
+  <h2>נתראה ב-22.12</h2>
+  <p class="big" style="margin-bottom:22px">נסו <span class="r">דבר אחד</span> עם התלמידים, או בשבילם:</p>
+  <div class="cols" style="align-items:stretch">
+    <div class="np f"><h4>העוזר שבניתם היום</h4><p>על משימה אמיתית שלכם.</p></div>
+    <div class="np f"><h4>מסמך או מצגת מקנבס</h4><p>שבאמת נכנסו לשיעור.</p></div>
+  </div>
+  <p class="f" style="margin-top:20px;font-size:27px">בואו עם רשמים ועם דוגמה - <span class="g">בלי שמות של תלמידים</span>.</p>
+  <p class="f" style="margin-top:8px;font-size:27px"><b>בפעם הבאה:</b> אפליקציות בקנבס - בונים כלי קטן לכיתה, <span class="r">בלי לכתוב קוד</span>.</p>
+</section>
+
+<!-- 31 thanks -->
+<section class="slide">
+  <div style="display:flex;flex:1;align-items:center;gap:60px">
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;gap:18px">
+      <img src="assets/logo-1400.png" alt="תום הגלעדי" style="width:420px">
+      <h1 style="font-size:84px">תודה</h1>
+      <p style="font-size:30px">תום הגלעדי</p>
+    </div>
+    <div style="width:470px"><div class="qrbox"><img src="assets/linktree-qr.png" alt="ברקוד ליצירת קשר"></div></div>
+  </div>
+</section>
+
+</div></div>
+<div id="bar"></div><div id="num"></div>
+<div id="help">&larr; קדימה &middot; &rarr; אחורה &middot; F מסך מלא</div>
+
+<script>
+(function(){
+  const deck=document.getElementById('deck'), slides=[...deck.querySelectorAll('.slide')];
+  const bar=document.getElementById('bar'), num=document.getElementById('num');
+  let si=0, fi=0, lockHash=false;
+  // fragments reveal one per click; elements that share data-step reveal together
+  function frags(){
+    const fs=[...slides[si].querySelectorAll('.f')];
+    if(!fs.some(f=>f.dataset.step)) return fs.map(f=>[f]);
+    const m=new Map(); fs.forEach(f=>{ const k=+(f.dataset.step||0); if(!m.has(k)) m.set(k,[]); m.get(k).push(f); });
+    return [...m.keys()].sort((a,b)=>a-b).map(k=>m.get(k));
+  }
+  function render(){
+    slides.forEach((s,i)=>s.classList.toggle('on', i===si));
+    frags().forEach((g,i)=>g.forEach(f=>f.classList.toggle('vis', i<fi)));
+    bar.style.width=((si+1)/slides.length*100)+'%';
+    num.textContent=(si+1)+' / '+slides.length;
+    lockHash=true; location.hash=(si+1); setTimeout(()=>{lockHash=false;},0);
+  }
+  function next(){ if(fi<frags().length){ fi++; } else if(si<slides.length-1){ si++; fi=0; } render(); }
+  function prev(){ if(fi>0){ fi--; } else if(si>0){ si--; fi=frags().length; } render(); }
+  function goto(n){ si=Math.max(0,Math.min(slides.length-1,n)); fi=frags().length; render(); }
+  window.__deck={slides,goto,showAll(n){si=n;fi=frags().length;render();}};
+  // Hebrew deck, read right to left: LEFT = forward, RIGHT = back (Tom, 3.10.2026)
+  document.addEventListener('keydown', e=>{
+    switch(e.key){
+      case 'ArrowLeft': case 'PageDown': case ' ': case 'Enter': e.preventDefault(); next(); break;
+      case 'ArrowRight': case 'PageUp': case 'Backspace': e.preventDefault(); prev(); break;
+      case 'ArrowDown': e.preventDefault(); goto(si+1); break;
+      case 'ArrowUp': e.preventDefault(); goto(si-1); break;
+      case 'Home': e.preventDefault(); goto(0); break;
+      case 'End': e.preventDefault(); goto(slides.length-1); break;
+      case 'f': case 'F': document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen(); break;
+    }
+  });
+  deck.addEventListener('click', e=>{ if(e.target.closest('button,a')) return; next(); });
+  addEventListener('hashchange', ()=>{ if(lockHash) return; const n=parseInt(location.hash.slice(1)); if(n>=1&&n<=slides.length){ si=n-1; fi=0; render(); } });
+  function fit(){ deck.style.transform='scale('+Math.min(innerWidth/1280, innerHeight/720)+')'; }
+  addEventListener('resize', fit); fit();
+  const start=parseInt(location.hash.slice(1)); if(start>=1&&start<=slides.length){ si=start-1; }
+  render();
+})();
+</script>
+<script>
+// break timer: 10 minutes, shows the return time; the click never advances the slide
+(function(){
+  const btn=document.getElementById('tmbtn'), tm=document.getElementById('tm'), back=document.getElementById('back');
+  let tick=null;
+  btn.addEventListener('click', e=>{
+    e.stopPropagation();
+    const end=Date.now()+10*60*1000, d=new Date(end);
+    back.textContent='חוזרים לכיתה ב-'+String(d.getHours()).padStart(2,'0')+':'+String(d.getMinutes()).padStart(2,'0');
+    btn.textContent='הפעלה מחדש';
+    clearInterval(tick);
+    const upd=()=>{ const s=Math.max(0,Math.round((end-Date.now())/1000)); tm.textContent=String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0'); if(!s) clearInterval(tick); };
+    upd(); tick=setInterval(upd,1000);
+  });
+})();
+</script>
+</body>
+</html>
